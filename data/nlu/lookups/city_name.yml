@@ -1,0 +1,105 @@
+# version: "2.0"
+
+# nlu:
+#   - lookup: city_name
+#     examples: |
+#       - Bhubaneswar
+#       - Pune
+#       - Jaipur
+#       - Surat
+#       - Kochi
+#       - Ahmedabad
+#       - Jabalpur
+#       - Visakhapatnam
+#       - Solapur
+#       - Davangere
+#       - Indore
+#       - New Delhi
+#       - Coimbatore
+#       - Kakinada
+#       - Belagaavi
+#       - Udaipur
+#       - Guwahati
+#       - Chennai
+#       - Ludhiana
+#       - Bhopal
+#       - Lucknow
+#       - Bhagalpur
+#       - Faridabad
+#       - Chandigarh
+#       - Raipur
+#       - Ranchi
+#       - Dharamasala
+#       - Warangal
+#       - Panaji
+#       - Agartala
+#       - Imphal
+#       - Port Blair
+#       - New Town Kolkata
+#       - Amritsar
+#       - Kalyan
+#       - Ujjain
+#       - Tirupati
+#       - Nagpur
+#       - Mangalore
+#       - Vellore
+#       - Thane
+#       - Gwalior
+#       - Agra
+#       - Nashik
+#       - Rourkela
+#       - Kanpur
+#       - Madurai
+#       - Tumakuru
+#       - Kota
+#       - Thanjavur
+#       - Namchi
+#       - Jalandhar
+#       - Shimoga
+#       - Salem
+#       - Ajmer
+#       - Varanasi
+#       - Kohima
+#       - Hubli-Dharwad
+#       - Aurangabad
+#       - Vadodara
+#       - Thiruvananthapuram
+#       - Naya Raipur
+#       - Rajkot
+#       - Amravati
+#       - Patna
+#       - Karimnagar
+#       - Muzaffarpur
+#       - Puducherry
+#       - Gandhinagar
+#       - Srinagar
+#       - Sagar
+#       - Karnal
+#       - Satna
+#       - Bangalore
+#       - Shimla
+#       - Dehradun
+#       - Jhansi
+#       - Pimpri Chinchwad
+#       - Bilaspur
+#       - Pasighat
+#       - Jammu
+#       - Dahod
+#       - Thoothukudi
+#       - Tiruchirappalli
+#       - Tirunelveli
+#       - Tiruppur
+#       - Aizawl
+#       - Prayagraj
+#       - Aligarh
+#       - Gangtok
+#       - Erode
+#       - Saharanpur
+#       - Moradabad
+#       - Bareilly
+#       - Itanagar
+#       - Silvassa
+#       - Diu
+#       - Kavaratti
+#       - Bihar Sharif
+#       - Shillong

@@ -1,0 +1,476 @@
+version: "3.0"
+
+intents:
+  - greet
+  - how_are_you
+  - goodbye
+  - acknowledgement
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - bot_name_challenge
+  - about_scm
+  - components_scm
+  - purpose_scm
+  - where_read_more_scm
+  - what_smart_city
+  - no_city_in_scm
+  - initially_selected
+  - scm_imp_economic_growth
+  - scm_funds
+  - additional_funds
+  - city_profiles
+  - where_progress_scm
+  - see_download_data_analysis_visualisations
+  - scm_events
+  - city_selection
+  - ulb_work
+  - ulb_structure
+  - scm_implemented
+  - smart_city_manager
+  - ulb_spv_collaboration
+  - about_leadership
+  - which_ministry_scm
+  - various_initiatives
+  - data_initiatives
+  - innovation_initiatives
+  - assessment_inititatives
+  - nmt_initiatives
+  - capacity_building_initiatives
+  - what_nulp
+  - how_mission_knowledge_exchange
+  - what_citiis
+  - what_cix
+  - what_data_smart_strategy
+  - pandemic_preparedness
+  - covid_affect_scm
+  - what_dpr
+  - what_ulb
+  - what_spv
+  - what_abd
+  - what_pmc
+  - what_proposal
+  - what_nmt
+  - what_iccc
+  - what_azadi_ka_amrit_mahotsav
+  - what_cycles4change_challenge
+  - what_streets4people_challenge
+  - what_placemaking_marathon
+  - what_urban_learning_internship_program
+  - where_download_smart_cities_data
+  - what_smartnet
+  - what_smart_cities_open_data_portal
+  - what_nurturing_neighbourhoods_challenge
+  - what_nuis
+  - what_national_urban_digital_mission
+  - visit_indian_urban_observatory
+  - what_iuo
+  - what_iudx
+  - what_fellowship_program
+  - incentives_to_cities
+  - cycling_programs
+  - guidelines_released
+  - standards_being_developed_by_ict
+  - cities_doing_nmt
+  - what_dmaf
+  - what_mpi
+  - what_ease_of_living_index
+  - does_grade_cities
+  - what_benefits
+  - benefit_computing_city_gdp
+  - what_climate_framework
+  - is_a_smart_city
+  - start
+  - bot_capabilities
+  - what_time
+  - survey_response
+
+entities:
+  - city_name
+
+actions:
+  - action_get_time
+  - action_is_smart_city
+
+responses:
+  utter_greet:
+  - text: "Hey! 👋 How can I help you?"
+  - text: "Hello! 👋 How can I be of help?"
+  - text: "Hey! 👋 Ask me something."
+  
+  utter_help_options:
+  - text: "Here are some of the options to get you started."
+    buttons:
+    - title: "About Mission"
+      payload: /about_scm
+    - title: "Define smart city"
+      payload: /what_smart_city
+    - title: "SCM Funds"
+      payload: /scm_funds
+    - title: "Initiatives"
+      payload: /various_initiatives
+  
+  utter_how_are_you:
+  - text: "I am good. How about you?"
+
+  utter_brief_bot_intro:
+  - text: "I can help you answer questions related to the smart cities mission. You can ask me about various inititatives, funding for the mission, progress of various projects and lot more."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  - text: "Great, can I help you with anything else?"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Bye bye"
+  - text: "Ba bye"
+  - text: "See ya"
+
+  utter_iamabot:
+  - text: "I am a bot. My name is Karvi. What's yours?"
+  - text: "I am an artificial being and my name is Karvi"
+  - text: "I am chatbot. Here to help you."
+
+  utter_thanks_res:
+  - text: "Thanks. Here goes the next one."
+
+  utter_survey_end:
+  - text: "Thanks for helping us out. 😀"
+
+  # SCM
+
+  utter_about_scm:
+  - text: "The Smart Cities Mission was launched by the Hon’ Prime Minister on 25 June, 2015. The main objective of the Mission is to promote cities that provide core infrastructure, clean and sustainable environment and give a decent quality of life to their citizens through the application of ‘smart solutions’."
+  - text: "Smart cities mission works on sustainable and inclusive development by creation of replicable model cities which act as lighthouses to other aspiring 4000+ cities in India."
+  - text: "The Mission is operated as a Centrally Sponsored Scheme. Central Government will give financial support to the extent of Rs. 48,000 crores over 5 years i.e. on an average Rs.100 crore per city per year.  An equal amount on a matching basis is to be provided by the State/ULB.  Additional resources are to be raised through convergence, from ULBs’ own funds, grants under Finance Commission, innovative finance mechanisms such as Municipal Bonds, other government programs and borrowings. Emphasis has been given on the participation of private sector through Public Private Partnerships (PPP). "
+  - text: "Smart Cities Mission's aim is to drive economic growth and improve the quality of life of people by enabling local area development and harnessing technology, especially technology that leads to Smart outcomes."
+  - text: "The focus of the mission is on sustainable and inclusive development and the idea is to look at compact areas, create a replicable model which will act like a light house to other aspiring cities."
+  - text: "The objective of the mission is to promote cities that provide core infrastructure and give a decent quality of life to its citizens, a clean and sustainable environment and application of smart solutions. "
+  - text: "The main objective of the mission is to promote cities that provide core infrastructure, clean and sustainable environment and give a decent quality of life to their citizens through the application of smart solutions."
+
+  utter_components_scm:
+  - text: "In the context of our country, the six fundamental principles on which the concept of Smart Cities is based are Community at the core, More from less, Cooperative and competitive federalism, Integration, innovation and sustainability, Technology as means not the goal and Convergence"
+
+  utter_purpose_scm:
+  - text: "Smart Cities Mission is to drive economic growth and improve the quality of life of people by enabling local area development and harnessing technology, especially technology that leads to Smart outcomes."
+
+  utter_where_read_more_scm:
+  - text: You can read more about the mission at https://smartcities.gov.in/
+
+  utter_what_smart_city:
+  - text: "A smart city is about urban rejuvenation, governance, accountability, and ease of living."
+  - text: "Smart cities are cities that work. Most importantly, work for whom? And, what do we mean by cities that work? Cities are confluences of people; places where people live, come to meet, exchange ideas, earn livelihoods, access education, health and other services and enjoy a life of good quality. People are at the core of the city. Therefore, cities should work for their people. Cities that work for their people will continuously become better versions of themselves with each passing day."
+  - text: "There is no standard definition or template of a smart city. In the context of our country, the six fundamental principles on which the concept of Smart Cities is based are Community at the core, More from less, Cooperative and competitive federalism, Integration, innovation and sustainability, Technology as means not the goal and Convergence."
+
+  utter_no_city_in_scm:
+  - text: "100 cities have been selected for the mission across 4 rounds, with 5,151 projects and a total investment of $27 billion for the mission."
+
+  utter_initially_selected:
+  - text: "100 cities were selected through a multi-stage competition: 20 cities were selected in the 1st round, 27 cities in the 2nd round, 30 cities in the 3rd round, and 9 cities were selected in the 4th and final round.  Kindly check them out along with its profiles at: https://smartcities.gov.in/cities-profiles"
+
+  utter_scm_imp_economic_growth:
+  - text: "Economic growth can be generated by the activation of the local economy by direct investment of resources to complete the proposed projects to convert to city to a Smart City."
+
+  utter_scm_funds:
+  - text: "The Central Government has been financially supporting all the selected cities with Rs. 48,000 crores over 5 years i.e. on an average Rs.100 crore per city per year. An equal amount on a matching basis has been provided by the State/ULB."
+
+  utter_additional_funds:
+  - text: "Additional funds can be obtaiined through convergence, from ULBs’ own funds, grants under Finance Commission, innovative finance mechanisms such as Municipal Bonds, other government programs and borrowings. Private sector can directly fund projects through Public Private Partnerships (PPP)."
+
+  utter_city_profiles:
+  - text: "You can find the profiles here: https://smartcities.gov.in/cities-profiles"
+
+  utter_where_progress_scm:
+  - text: "We have a dashboard for all the cities to view the progress here: https://smartcities.gov.in/dashboard"
+
+  utter_see_download_data_analysis_visualisations:
+  - text: "There are many platforms build by the mission which are: DataSmart Cities - http://dsc.smartcities.gov.in/, India Urban Observatory (IUO) - https://iuo.mohua.gov.in/portal/apps/sites/#/data, India Urban Data Exchange (IUDX) - https://iudx.org.in/ and AMPLIFI - http://amplifi.mohua.gov.in/"
+
+  utter_scm_events:
+  - text: "Please visit our interactive calendar displaying our future events at https://smartcities.gov.in/events "
+
+  utter_city_selection:
+  - text: "The cities were selected hrough a multi-stage competition, being the first time a Urban Ministry programme used the ‘Challenge’ or competition method. The competition or challenge worked as follows, first the cities submitted Smart City Proposals (SCPs) stating the city specific problems to be addressed and the proposed projects to solve them taking into account the citizens’ aspirations. Secondly, a panel of experts decided the most feasible proposals and selected the cities. "
+
+  utter_ulb_work:
+  - text: "A ULB or Urban Local Body governs and administrates the internal affairs of a a city or a town of specified population."
+
+  utter_ulb_structure:
+  - text: "A ULB or Urban Local Body along with its list of functions is delegated by the state government."
+
+  utter_scm_implemented:
+  - text: "A new SPV or Special Purpose Vehicle was created at every selected for the implementation of the various Smart City projects."
+
+  utter_smart_city_manager:
+  - text: "The manager and responsible of an specific Smart City is the CEO of the special purpose vehicle who is an IAS officer appointed by the board of members of the special purpose vehicle."
+
+  utter_ulb_spv_collaboration:
+  - text: "Even though the SPV or Special Purpose Vehicle is the sole responsible for the management and implementation of the Smart City projects, they usually collaborate closely with the existing ULB. As both entities manage urban governance and projects, coordination is essential for its succesful implementation."
+
+  utter_about_leadership:
+  - text: "From MoHUA the Mission is leaded by Mr. Hardeep S Puri - Hon'ble Minister, Ministry of Housing and Urban Affairs, Ministry of Petroleum and Natural Gas and Mr. Durga Shanker Mishra - Secretary, Ministry of Housing and Urban Affairs. At the Smart Cities Mission: Mr. Kunal Kumar is Joint Secretary and  Mission Director along with Mr. Lal Chhandama, Mr. Rahul Kapoor, Mr. Jitendra Meha who serve as Director SC-I, SC-II and SC-III respectively. Last but not least, Mr. Supriyo Mukherjee is the Deputy Secretary. \nTo know more, please visit our website: https://smartcities.gov.in/team"
+
+  utter_which_ministry_scm:
+  - text: "India Smart Cities Mission is led by the Ministry of Housing & Urban Affairs"
+
+  utter_various_initiatives:
+  - text: "Currently, there are over 21 active initiatives around data, innovation, climate change, assessments, NMT and capacity building. Kindly check them out at: https://smartcities.gov.in/Initiatives"
+    buttons:
+    - title: "Data"
+      payload: /data_initiatives
+    - title: "Innovation"
+      payload: /innovation_initiatives
+    - title: "Assessments"
+      payload: /assessment_inititatives
+    - title: "NMT"
+      payload: /nmt_initiatives
+    - title: "Capacity Building"
+      payload: /capacity_building_initiatives
+
+  utter_data_initiatives:
+  - text: "India Urban Data Exchange, DataSmart Cities Strategy and India Urban Observatory are data initiatives from the mission."
+    buttons:
+    - title: "IUDX"
+      payload: /what_iudx
+    - title: "IUO"
+      payload: /what_iuo
+
+  utter_innovation_initiatives:
+  - text: "National Urban Innovation Stack, City Innovation Exchange and Smart Cities Fellowship are some of the innovation led initiatives by the mission."
+    buttons:
+    - title: "NUIS"
+      payload: /what_nuis
+    - title: "CiX"
+      payload: /what_cix
+    - title: "Fellowship"
+      payload: /what_fellowship_program
+
+  utter_assessment_inititatives:
+  - text: "Climate Smart Cities Assessment Framework, Data Maturity Assessment Framework (DMAF), Minicipal Performance Index (MPI) and Ease of Living (EoL) Index are the assessment frameworks developed by the mission."
+    buttons:
+    - title: "Climate Smart Cities"
+      payload: /what_climate_framework
+    - title: "DMAF"
+      payload: /what_dmaf
+    - title: "MPI"
+      payload: /what_mpi
+    - title: "EoL"
+      payload: /what_ease_of_living_index
+
+  utter_nmt_initiatives:
+  - text: "India Cycles4Change Challenge, Streets4people Challenge, Nurturing Neigbourhoods Challenge, Placemaking Marathon are few NMT initiatives taken up by India Smart Cities Mission"
+    buttons:
+    - title: "Cycles4Change"
+      payload: /what_cycles4change_challenge
+    - title: "Streets4people"
+      payload: /what_streets4people_challenge
+    - title: "Nurturing Neigbourhoods"
+      payload: /what_nurturing_neighbourhoods_challenge
+    - title: "Placemaking Marathon"
+      payload: /what_placemaking_marathon
+
+  utter_capacity_building_initiatives:
+  - text: "National Urban Innovation Stack (NUIS) & National Urban Learning Platform (NULP) are few of the many capacity building initiatives by the Smart Cities Mission."
+    buttons:
+    - title: "NUIS"
+      payload: /what_nuis
+    - title: "NULP"
+      payload: /what_nulp
+
+  utter_what_nulp:
+  - text: "The National Urban Learning Platform is a content neutral, scalable and multi-channel platform which can be used for producing and delivering capacity through a 360 degree approach. NULP includes tools to enable and streamline content creation, content organization and management, course building, course management, assessment and certification. \nTo know more about the platform, please visit our website: https://nulp.niua.org"
+
+  utter_how_mission_knowledge_exchange:
+  - text: "The National Urban Learning Platform is an ecosystem approach to capacity building for the urban development sector, convening actors of the quadruple helix - Government, Academia, Industry, and Civil Society, to participate in strengthening the overall system to better solve challenges of urban India. To know more: https://www.nuis.in/"
+
+  utter_what_citiis:
+  - text: "City Investments to Innovate, Integrate and Sustain (CITIIS) Challenge: launched in partnership with Agence Française de Développement (AFD) and European Union, to extend a loan of EUR 100 million for implementation of upto 15 innovative projects selected through an All-India Challenge in four sectors- sustainable mobility, public open spaces, urban governance & ICT and social and organizational innovation in low-income settlements. https://www.niua.org/citiis/"
+
+  utter_what_cix:
+  - text: "City innovation exchange will facilitate innovation procurement in cities through a transparent & collaborative process. CiX marks the first step in the creation of Innovation Zones at the level of Urban Local Bodies, a vision shared by Smart Cities Mission with StartUp India. CiX adopts the Open Innovation Model to build solutions to address cities’ challenges. https://cityinx.niua.org/"
+
+  utter_what_data_smart_strategy:
+  - text: "Through the DataSmart Cities Strategy our Smart Cities will embark on a journey to create a culture of data through various initiatives and engaging with various stakeholders in solving their urban challenges. \nThe Strategy will give direction to the various stakeholders who may be working in vertically integrated structures, holding data produced by them in silos. \nCities will be able to solve the myriad complex issues by unlocking this data and sharing them amongst key stakeholders."
+
+  utter_pandemic_preparedness:
+  - text: "Smart Cities Mission (SCM) has been actively providing support for rapid response in COVID 19 management. The Integrated Command and Control Centers (ICCC) set up under the mission in various Smart Cities including Bangalore, Pune, Agra and Vadodara to name a few have been transformed into war rooms for real time monitoring and effective management of the pandemic using technology. https://smartnet.niua.org/covid-19"
+
+  utter_covid_affect_scm:
+  - text: "In response to Covid 19, various initiatives were taken up by the mission such as India Cycles4Change challenge, Streets 4 People challenge and many more."
+
+# Glossary
+
+  utter_what_dpr:
+  - text: "A DPR or Detailed Project Report is extensive report of any project proposed by the city which has to submitted for final approval and sanctioning of funds."
+
+  utter_what_ulb:
+  - text: "A ULB or Urban Local Body is a city or town-specific administrative and governing body."
+
+  utter_what_spv:
+  - text: "A SPV or Special Purpose Vehicle is a subsidary company that is formed to undertake a specific purpose or activity. In the case of the SCM, every city formed a new SPV being the specific purpose or activity the implementation of the various Smart City projects."
+
+  utter_what_abd:
+  - text: "The  ABD or Area Based Development is undertaken by the selected Smart Cities via three components: city improvement (retrofitting), city renewal (redevelopment) and city extension (Greenfield development). Additionally to the ABD, the cites are doing pan-city initiative(s) in which smart solutions are applied covering larger parts of the city."
+
+  utter_what_pmc:
+  - text: "A PMC or Project Management Consultant is an external company/entity hired by the SPV to manage and implement a specific project or set of projects."
+
+  utter_what_proposal:
+  - text: "Most of the Smart City projects are  ABD or Area Based Development including three components: city improvement (retrofitting), city renewal (redevelopment) and city extension (Greenfield development). Additionally to the ABD, the cites proposed and are doing pan-city project(s) in which smart solutions are applied covering larger parts of the city."
+
+  # N
+
+  utter_what_nmt:
+  - text: "NMT stands for Non-Motorised Transportation. Non polluting models like walking and cycling are part of NMT."
+
+  utter_what_iccc:
+  - text: "ICCC stands for Integrated Command and Control Centre."
+
+  utter_what_azadi_ka_amrit_mahotsav:
+  - text: "To celebrate and commemorate 75 years of progressive India and its glorious history, the Ministry of Housing and Urban Affairs is organizing special events and programmes throughout India from 27th September to 3rd October, 2021, as part of the ‘Azadi Ka Amrit Mahotsav’ celebrations. For more details refer to https://pib.gov.in/PressReleasePage.aspx?PRID=1758247"
+  - text: "Azadi Ka Amrit Mahotsav (India@75) is a series of events, being organised to commemorate the 75th Anniversary of India’s Independence. The Mahotsav will be celebrated as a Jan-Utsav in the spirit of Jan-Bhagidari. For more details refer to https://pib.gov.in/PressReleasePage.aspx?PRID=1758247"
+  
+  utter_akam_images:
+  - text: "Here are some of the images from various events. Let me know if you want to see more images. :)"
+    image: "https://smartnet.niua.org/placemaking-marathon/img/city/Gangtok_P1_Photos/After.jpg"
+    # image: "https://smartnet.niua.org/placemaking-marathon/img/city/Kakinada_P2_Photos/After.jpg"
+    # image: "https://smartnet.niua.org/placemaking-marathon/img/city/Kakinada_P1_Photos/Gallery_6.jpg"
+
+  utter_what_cycles4change_challenge:
+  - text: "The India Cycles4Change Challenge is an initiative of the mission to inspire and support Indian cities to quickly implement cycling-friendly initiatives in response to COVID-19."
+
+  utter_what_streets4people_challenge:
+  - text: "The Streets4People Challenge is an initiative of the mission to inspire cities to create walking-friendly streets through quick measures, in response to COVID-19. The Challenge will support cities across the country to develop a unified vision of Streets4People in consultation with stakeholders and citizens."
+  - text: "The Challenge aims to create flagship walking initiatives in cities, which focus on placemaking and liveability. Cities will be required to reimagine their streets as public spaces through the lens of economic regeneration, safety, and child-friendly interventions initiatives, in order to ensure a green recovery from COVID-19."
+  
+  utter_what_placemaking_marathon:
+  - text: "Placemaking marathon is an initiative under the Smart Cities Mission that encourages cities to reimagine one or more public spaces in their city and transform it within 75 hours."
+
+  utter_what_urban_learning_internship_program:
+  - text: "The Urban Learning Internship Program (TULIP) was launched to match opportunities in ULBs and Smart Cities with learning needs of recent graduates. The program intends to fulfil the twin goals of providing hands-on learning experience to recent graduates as well as benefiting States, ULBs and Smart Cities with infusion of fresh energy and ideas to solve critical challenges. TULIP envisions to create synergies between advancing functional skills in students and harnessing their energy and ideas to co-create solutions for the future of our cities. You can visit our website to look for opportunities to work with us: https://internship.aicte-india.org/module_ulb/Dashboard/TulipMain/"
+
+  utter_where_download_smart_cities_data:
+  - text: "The mission has multiple data platforms where you can search for the datasets. Here is a list to the platforms:
+            1. Smart Cities Open Data Portal (https://smartcities.data.gov.in)
+            2. India Urban Data Exchange (https://catalogue.iudx.org.in)
+            3. India Urban Observatory (https:iuo.mohua.gov.in)"
+
+  utter_what_smartnet:
+  - text: "SmartNet is a repository of resources to support the development of cities across India and to create a resource-rich ecosystem of learning, sharing and disseminating for city managers and primary stakeholders in the urban transformation of India. The platform provides a horizontal learning and knowledge sharing platform for exchange between cities, practitioners, academia, researchers and technologists. Visit our website to know more about smartnet and download relevant resources: https://smartnet.niua.org/ "
+
+  utter_what_smart_cities_open_data_portal:
+  - text: "The Smart Cities Open Data Portal is designed to host open datasets of 100 Smart Cities of India and more than 2,600 datasets from 95 Smart Cities are already uploaded on the portal for free access to the public. This initiative is in line with the Open Government Data (OGD) Platform India developed by NIC as per the mandate given in the NDSAP Policy.  You can visit our website to know more about the data portal and to download the datasets: https://smartcities.data.gov.in/ "
+
+  utter_what_nurturing_neighbourhoods_challenge:
+  - text: "The Nurturing Neighborhoods Challenge enables Indian cities to adopt an early childhood lens in designing neighbourhood-level improvements that promote the health and well-being of young children and their caregivers. Through the Challenge, selected cities will receive technical assistance and capacity-building to improve public spaces, mobility, neighbourhood planning, early childhood services and data management. You can visit our website to know more about the challenge: https://smartnet.niua.org/nurturing-neighbourhoods-challenge/web/ "
+
+  utter_what_nuis:
+  - text: "National Urban Innovation Stack (NUIS) aims to catalyse transformative collaboration in the urban ecosystem through establishing a shared digital public good. NUIS will strengthen the capacity of the urban ecosystem to solve complex programs quickly and at scale by unlocking the power of urban data, build capacity among all actors of the quadruple helix, driving discoverability and collaboration between urban stakeholders, and enabling responsive and data driven governance. You can visit our website to know more about the innovation stack: https://smartnet.niua.org/nuis19/ "
+
+  utter_what_national_urban_digital_mission:
+  - text: "National Urban Digital Mission (NUDM) aims to build the shared digital infrastructure that will strengthen the capacity of the urban ecosystem to solve complex problems at scale and speed. It is built as a public good and provides the ecosystem actors the foundational digital building blocks, ready-to-use platforms, standards, specifications, and frameworks. You can visit our website to know more about the mission: https://nudm.mohua.gov.in/ "
+
+  utter_visit_indian_urban_observatory:
+  - text: "Coming soon!"
+
+  utter_what_iuo:
+  - text: "The India Urban Observatory plugs into various sources of data from cities both from real-time and archival sources for generating insights through analytics for cities, academia, industry and governments. The Mission has set up the IUO at the Ministry office in New Delhi. The Observatory is designed to provide an interactive showcase of collective insights on cities over various parameters using data through various sensors, devices, third party sources including citizens and social media. You can visit our website to go through the insights we have generated at IUO: https://iuo.mohua.gov.in "
+
+  utter_what_iudx:
+  - text: "India Urban Data Exchange (IUDX) is an open source software platform that will facilitate secure and authenticated exchange of data amongst various data platforms, 3rd party applications, data producers and consumers, both within a city to begin with, and scaled up across cities eventually at a national level, in a uniform & seamless way. You can visit our website to know more about IUDX: https://iudx.org.in/ "
+
+  utter_what_fellowship_program:
+  - text: "The objective of the India Smart Cities Fellowship Programme (ISCF) is to select a cohort of promising young professionals who have the potential to contribute to the innovation ecosystem that is fast developing around the smart cities. They provide necessary support to the Office of Mission Director, Smart Cities in MoHUA and/or CEOs of selected Smart Cities in terms of analytics, research, documentation, etc. Read more about the program by visiting our website: https://www.niua.org/iscfip/ "
+
+  utter_incentives_to_cities:
+  - text: "India Smart Cities Awards Contest (ISAC) was launched to reward the cities, projects and innovative ideas that promote smart development in cities. You can visit our website to know more about the smart cities award: https://smartnet.niua.org/smart-cities-awards-2020/ "
+
+  utter_cycling_programs:
+  - text: "India Cycles for Change (IC4C) Challenge launched in June 2020 is an initiative to inspire and support the cities to implement cycling friendly initiative, to encourage cities to experiment cycling and build confidence for a city-level scale-up with the goal to learn, rather than plan to perfection. You can visit our website to know more about the challenge: https://smartnet.niua.org/indiacyclechallenge/ "
+
+  utter_guidelines_released:
+  - text: "There are many guidelines and documents released by the mission under various sectors like Place Making, Smart Solutions, Physical Infrastructure, Social Infrastructure, Urban Transport, Housing, Environment, Urban Development and Planning, Finance / PPP and Governance. You can visit the SmartNet Library to search for these documents: https://smartnet.niua.org/learn/library"
+
+  utter_standards_being_developed_by_ict:
+  - text: "Mission has been working on creating multiple Information and Communication Technology standards to support the development of smart cities. One such standard called ICT Reference Architecture (USI-ICT RA) aimed at creating Unified, Resilient, and Secure & Sustainable Smart Infrastructure is build and is adopted by the Bureau of Indian Standards."
+
+  utter_cities_doing_nmt:
+  - text: "NA"
+
+  utter_what_dmaf:
+  - text: "With DMAF, the mission will be able to promote a spirit of competitive benchmarking amongst all the smart cities that will enable them to assess themselves at varying degrees of data maturity with respect to a standardized framework covering aspects of enabling policies, governance structures, data management, capacity building, and stakeholder engagement. This will also play an enabling role in furthering innovation, collaboration, co-creation and research."
+
+  utter_what_mpi:
+  - text: "Municipal Performance Index seeks to examine the sectoral performance of Municipalities across a set of 5 verticals namely Service, Finance, Planning, Technology and Governance. These 5 verticals have been further divided into 20 sectors which will be evaluated across 100 indicators. To know more: https://eol.smartcities.gov.in/home"
+
+  utter_what_ease_of_living_index:
+  - text: "Ease of Living Index (EoL) launched in June 2017 with the objective of framing an index to enable a shift to data driven approach in urban planning and management and promote healthy competition among cities. The first Liveability Report was published in August 2018. The current edition of The Ease of Living Index 2019-20, which has been improved from the earlier version, is more focused on outcomes of the three pillars: Quality of Life, Economic Ability and Sustainability which are further divided into 14 categories across 50 indicators. To know more: https://eol.smartcities.gov.in/home"
+
+  utter_does_grade_cities:
+  - text: "City Rankings are provided by the Ministry of Housing & Urban Affairs, based on Ease of Living index and Municipal performance Index. Find out India's most livable & best performing cities here: https://eol.smartcities.gov.in/dashboard"
+
+  utter_what_benefits:
+  - text: "The functions integral to the working of a city are performed by different stakeholders. Data available with these entities remains in silos, which needs to be unlocked and shared amongst them. Thus, to unleash the power of urban data for transformation it is crucial to unlock it and make it the common language of collaboration in the urban ecosystem. http://dsc.smartcities.gov.in/ "
+
+  utter_benefit_computing_city_gdp:
+  - text: "Measuring city GDP enables cities to do better socio-economic and infrastructural planning. However, there is no standardized methodology for estimating city level GDP."
+
+  utter_what_climate_framework:
+  - text: "Cities are responsible for the climate-sensitive development of their urban areas. While they are a significant contributor to climate change, they are also particularly vulnerable to its consequences. To facilitate cities in understanding these challenges and where they may improve, “ClimateSmart Cities Assessment Framework” with 28 diverse indicators across five categories have been framed. To know more: https://www.niua.org/csc/"
+  - text: "The Climate Smart Cities Assessment Framework includes various air and climate relevant parameters that shall guide the cities and help them to assess their own preparedness to tackle the menace of climate change and degrading air quality. https://www.niua.org/csc/ "
+
+  utter_thanks:
+  - text: "Awesome! Thanks. Here we go!"
+
+  utter_question_1:
+  - text: "To what extent do you agree/disagree that good quality education for children is affordable in this city?"
+    buttons:
+    - title: "Strongly agree"
+      payload: /survey_response
+    - title: "Agree"
+      payload: /survey_response
+    - title: "Neither agree not disagree"
+      payload: /survey_response
+    - title: "Disagree"
+      payload: /survey_response
+    - title: "Strongly Disagree"
+      payload: /survey_response
+
+  utter_question_2:
+  - text: "To what extent do you agree/disagree that is it quite affordable to get a quality healthcare services in this city?"
+    buttons:
+    - title: "Strongly agree"
+      payload: /survey_response
+    - title: "Agree"
+      payload: /survey_response
+    - title: "Neither agree not disagree"
+      payload: /survey_response
+    - title: "Disagree"
+      payload: /survey_response
+    - title: "Strongly Disagree"
+      payload: /survey_response
+
+  # Misc
+
+  utter_acknowledgement:
+  - text: ":)"
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_survey_request:
+  - text: "Can you spare sometime to answer a few questions? Your feedback will help us improve urban governance."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

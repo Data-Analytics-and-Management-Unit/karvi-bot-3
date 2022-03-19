@@ -1,0 +1,682 @@
+version: "3.0"
+
+stories:
+
+- story: init path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help_options
+  - intent: mood_great
+  - action: utter_happy
+
+- story: general_hi_hello
+  steps:
+  - intent: how_are_you
+  - action: utter_how_are_you
+  - intent: mood_great
+  - action: utter_greet
+
+- story: people asking about the chatbot
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_name_challenge
+  - action: utter_iamabot
+
+- story: about the smart cities mission
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_brief_bot_intro
+  - intent: about_scm
+  - action: utter_about_scm
+  - intent: components_scm
+  - action: utter_components_scm
+  - intent: purpose_scm
+  - action: utter_purpose_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm components
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: components_scm
+  - action: utter_components_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+# - story: scm purpose
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: purpose_scm
+#   - action: utter_purpose_scm
+#   - intent: acknowledgement
+#   - action: utter_happy
+
+- story: read more about scm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: where_read_more_scm
+  - action: utter_where_read_more_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: about smart cities
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_smart_city
+  - action: utter_what_smart_city
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: no of cities in scm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: no_city_in_scm
+  - action: utter_no_city_in_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: cities initially selected
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: initially_selected
+  - action: utter_initially_selected
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: is scm imp for ecomonic growth
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: scm_imp_economic_growth
+  - action: utter_scm_imp_economic_growth
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm funds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: scm_funds
+  - action: utter_scm_funds
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: additional funds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: additional_funds
+  - action: utter_additional_funds
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: city profiles
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: city_profiles
+  - action: utter_city_profiles
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm progress
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: where_progress_scm
+  - action: utter_where_progress_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: download data analysis viz
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: see_download_data_analysis_visualisations
+  - action: utter_see_download_data_analysis_visualisations
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm events
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: scm_events
+  - action: utter_scm_events
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: city selection process
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: city_selection
+  - action: utter_city_selection
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: ulb working
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ulb_work
+  - action: utter_ulb_work
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: ulb structure
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ulb_structure
+  - action: utter_ulb_structure
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm implementation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: scm_implemented
+  - action: utter_scm_implemented
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: city managers
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: smart_city_manager
+  - action: utter_smart_city_manager
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: ulb spv collaboration
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ulb_spv_collaboration
+  - action: utter_ulb_spv_collaboration
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm leadership
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_leadership
+  - action: utter_about_leadership
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: which ministry scm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: which_ministry_scm
+  - action: utter_which_ministry_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: various initiatives
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: various_initiatives
+  - action: utter_various_initiatives
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: data initiatives
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: data_initiatives
+  - action: utter_data_initiatives
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: innovation initiatives
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: innovation_initiatives
+  - action: utter_innovation_initiatives
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: assessment initiatives
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: assessment_inititatives
+  - action: utter_assessment_inititatives
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: nmt initiatives
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: nmt_initiatives
+  - action: utter_nmt_initiatives
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: capacity building initiatives
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: capacity_building_initiatives
+  - action: utter_capacity_building_initiatives
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is nulp
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_nulp
+  - action: utter_what_nulp
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: how to do knowledge exchange
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: how_mission_knowledge_exchange
+  - action: utter_how_mission_knowledge_exchange
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is citiis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_citiis
+  - action: utter_what_citiis
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is cix
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_cix
+  - action: utter_what_cix
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is data smart city strategy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_data_smart_strategy
+  - action: utter_what_data_smart_strategy
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: pandemic preparedness
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: pandemic_preparedness
+  - action: utter_pandemic_preparedness
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: covid affected scm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: covid_affect_scm
+  - action: utter_covid_affect_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is dpr
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_dpr
+  - action: utter_what_dpr
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is ulb
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_ulb
+  - action: utter_what_ulb
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is spv
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_spv
+  - action: utter_what_spv
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is abd
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_abd
+  - action: utter_what_abd
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is pmc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_pmc
+  - action: utter_what_pmc
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is a proposal
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_proposal
+  - action: utter_what_proposal
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is nmt
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_nmt
+  - action: utter_what_nmt
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is iccc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_iccc
+  - action: utter_what_iccc
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is akam
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_azadi_ka_amrit_mahotsav
+  - action: utter_what_azadi_ka_amrit_mahotsav
+  - action: utter_akam_images
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is c4c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_cycles4change_challenge
+  - action: utter_what_cycles4change_challenge
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is s4p
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_streets4people_challenge
+  - action: utter_what_streets4people_challenge
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: about tulip
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_urban_learning_internship_program
+  - action: utter_what_urban_learning_internship_program
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: download data
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: where_download_smart_cities_data
+  - action: utter_where_download_smart_cities_data
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is smartnet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_smartnet
+  - action: utter_what_smartnet
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is scodp
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_smart_cities_open_data_portal
+  - action: utter_what_smart_cities_open_data_portal
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is nnc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_nurturing_neighbourhoods_challenge
+  - action: utter_what_nurturing_neighbourhoods_challenge
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is nuis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_nuis
+  - action: utter_what_nuis
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is nudm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_national_urban_digital_mission
+  - action: utter_what_national_urban_digital_mission
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: visit iuo
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: visit_indian_urban_observatory
+  - action: utter_visit_indian_urban_observatory
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is iuo
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_iuo
+  - action: utter_what_iuo
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is iudx
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_iudx
+  - action: utter_what_iudx
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: about fellowship
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_fellowship_program
+  - action: utter_what_fellowship_program
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: incentives to cities
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: incentives_to_cities
+  - action: utter_incentives_to_cities
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: about cycling programs
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cycling_programs
+  - action: utter_cycling_programs
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm guidelines
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: guidelines_released
+  - action: utter_guidelines_released
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm standards
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: standards_being_developed_by_ict
+  - action: utter_standards_being_developed_by_ict
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: cities nmt
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cities_doing_nmt
+  - action: utter_cities_doing_nmt
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is dmaf
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_dmaf
+  - action: utter_what_dmaf
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is mpi
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_mpi
+  - action: utter_what_mpi
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is eol
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_ease_of_living_index
+  - action: utter_what_ease_of_living_index
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: city grades
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: does_grade_cities
+  - action: utter_does_grade_cities
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: scm benefits
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_benefits
+  - action: utter_what_benefits
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: city gdp
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: benefit_computing_city_gdp
+  - action: utter_benefit_computing_city_gdp
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: what is climate framework
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_climate_framework
+  - action: utter_what_climate_framework
+  - intent: acknowledgement
+  - action: utter_happy
+
+# City Specific
+
+- story: is a smart city
+  steps:
+  - intent: is_a_smart_city
+  - action: action_is_smart_city
+
+# Misc
+
+- story: enquire_time
+  steps:
+  - intent: what_time
+  - action: action_get_time
+
+- story: survey
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: purpose_scm
+  - action: utter_purpose_scm
+  - action: utter_survey_request
+  - intent: affirm
+  - action: utter_thanks
+  - action: utter_question_1
+  - intent: survey_response
+  - action: utter_thanks_res
+  - action: utter_question_2
+  - intent: survey_response
+  - action: utter_survey_end

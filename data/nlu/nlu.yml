@@ -1,0 +1,626 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - start
+
+- intent: how_are_you
+  examples: |
+    - Hey! How are you?
+    - How are you?
+    - How are you doing?
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+  
+- intent: acknowledgement
+  examples: |
+    - cool
+    - thanks
+    - cool thanks
+    - thanks cool
+    - ok
+    - okay
+    - right
+    - sure
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - yo
+    - why not
+    - ya
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - good
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: bot_name_challenge
+  examples: |
+    - what is your name?
+    - tell me your name
+    - tell me about you
+    - who are you
+    - who am i talking to
+    - identify yourself
+
+# Category About
+
+- intent: about_scm
+  examples: |
+    - What is smart cities mission?
+    - what is scm?
+    - tell me about smart cities mission
+    - tell me about scm
+    - what is this mission about
+    - tell me more about smart cities mission
+    - I want to know about the smart cities mission
+    - I want to know about the mission
+    - What is the focus of Smart City Mission
+    - What is the objective of SCM?
+    - SCM means?
+
+- intent: components_scm
+  examples: |
+    - Which are the components of SCM?
+    - Which are the pillars of a SCM?
+
+- intent: purpose_scm
+  examples: |
+    - What is the purpose of SCM? 
+    - What is the vision of the SCM
+
+- intent: where_read_more_scm
+  examples: |
+    - Where can I read more about the mission?
+    - Smart Cities Website
+
+- intent: what_smart_city
+  examples: |
+    - What is a smart city?
+    - How do we define a smart city?
+    - what do we mean by a smart city?
+    - how is a smart city defined?
+    - can you tell me about smart city?
+    - what are smart cities?
+    - what makes a city smart?
+
+- intent: no_city_in_scm
+  examples: |
+    - How many cities are part of the mission?
+    - How many cities were selected and what was the total investment?
+    - How many smart cities are in India?
+    - How many cities are funded by the mission?
+
+- intent: initially_selected
+  examples: |
+    - How many cities were initially selected for the SCM? 
+
+- intent: scm_imp_economic_growth
+  examples: |
+    - Is SCM important for economic growth?
+    - How will my city benefit by the smart cities mission?
+    - How I can benefit from the SCM?
+    - How I can benefit from the Smart cities mission?
+    - What benefits are for the regular citizen?
+
+- intent: scm_funds
+  examples: |
+    - How much money does a city get?
+    - What kind of benefits a city is getting if selected?
+    - What kind of support a city is getting if selected?
+    - How much money a city gets to become Smart? 
+    - Who is paying for the projects?
+    - Who is funding the projects?
+    - Who is providing funds to the cities?
+    - Who is supporting the development of the projects?
+    - How much money does a city get?
+    - What support does cities get from the mission?
+
+- intent: additional_funds
+  examples: |
+    - Additional funds
+    - How can a selected city get additional funds?
+    - A selected city can get additional money?
+    - Who provides the additional funds?
+    - What if the money from the SCM is not enough for a city to become smart?
+    - Only tax payers money is utilised?
+    - How industry / privates contribute / invest in the SCM?
+
+- intent: city_profiles
+  examples: |
+     - Where can I find the city profiles under the smart cities mission?
+
+- intent: where_progress_scm
+  examples: |
+    - Where can I see the progress of all the smart cities?
+
+- intent: see_download_data_analysis_visualisations
+  examples: |
+    - Where can I see and download data?
+    - Where can I see and download analysis?
+    - Where can I see and download visualizations?
+
+- intent: scm_events
+  examples: |
+     - Where can I find information on the future events, webinars and workshops?
+     - How can I find events for citizen participation?
+
+- intent: city_selection
+  examples: |
+    - How was the process for selecting the cities?
+
+- intent: ulb_work
+  examples: |
+    - How does an urban local body works?
+    - What is the responsibility of a ULB?
+
+- intent: ulb_structure
+  examples: |
+    - How is a ULB structured?
+
+- intent: scm_implemented
+  examples: |
+    - How is the smart cities mission implemented at the city level?
+    - Who implements the projects?
+    - Who is in charge / responsible of the smart city at the city level?
+
+- intent: smart_city_manager
+  examples: |
+    - Who managed the smart cities?
+    - Who is the responsible for a Smart City?
+    - With who can I complain about my Smart City?
+    - Who supervises the projects of my Smart City?
+
+- intent: ulb_spv_collaboration
+  examples: |
+    - How does the ULB and Smart city SPV collaborate?
+    - How the MC comes into picture?
+    - How does the municipal corportation comes into picture?
+    - What is the relation with the existing authorities?
+    - Is the Municipal Comissioner involved in the SCM?
+
+- intent: about_leadership
+  examples: |
+    - who is leading the mission
+    - who is running the mission
+    - tell me about the leadership
+    - who is at the top
+    - who is the mission director
+    - who is the director
+
+- intent: which_ministry_scm
+  examples: |
+    - Smart Cities mission is under which ministry or department?
+
+# Various Initiatives
+
+- intent: various_initiatives
+  examples: |
+    - What are the various initiatives under the mission?
+    - Tell me about various inititatives by the mission
+    - Tell me about the inititatives
+    - tell me about different initiatives
+    - tell me about different projects
+    - tell me about various projects
+    - tell me about the projects
+    - what projects are there?
+    - what is the mission working on?
+    - which projects are ongoing?
+
+- intent: data_initiatives
+  examples: |
+    - What are the various data initiatives under the smart cities mission?
+    - What are the various data initiatives under the scm?
+    - What are the various data initiatives under the mission?
+
+- intent: innovation_initiatives
+  examples: |
+    - What are the various innovation led initiatives under the smart cities mission?
+
+- intent: assessment_inititatives
+  examples: |
+    - What are the various initiatives for assessments under the smart cities mission?
+
+- intent: nmt_initiatives
+  examples: |
+    - What are the various NMT initiatives under the smart cities mission?
+    - How are you improving nmt in India?
+    - Is NMT being improved in our cities?
+    - Is walking and cycling infrastructure being improved in our cities?
+
+- intent: capacity_building_initiatives
+  examples: |
+    - What are the various capacity building initiatives under the smart cities mission?
+
+- intent: what_nulp
+  examples: | 
+    - What is National Urban Learning Platform?
+    - What is NULP?
+    - How is the mission contributing to learning?
+
+- intent: how_mission_knowledge_exchange
+  examples: |
+    - How the mission engage with the citizen in the decision?
+    - How the mission engage with the citizen in the decision?
+
+- intent: what_citiis
+  examples: |
+    - What is CITIIS programme?
+
+- intent: what_cix
+  examples: |
+    - What is city innovation exchange?
+    - What is CiX?
+    - what are you doing to foster innovation?
+
+- intent: what_data_smart_strategy
+  examples: |
+    - What is data smart city strategy?
+    - What strategy or policy do you have for data?
+    - How can cities become data driven?
+
+# CoViD-19
+
+- intent: pandemic_preparedness
+  examples: |
+    - How has the mission prepared for the pandemic?
+
+- intent: covid_affect_scm
+  examples: |
+    - Did covid affect SCM progress?
+
+# Glossary
+
+- intent: what_dpr
+  examples: |
+    - What is a DPR?
+    - What is a detailed project report?
+
+- intent: what_ulb
+  examples: |
+    - What is a ULB?
+    - What is an urban local body?
+
+- intent: what_spv
+  examples: |
+    - What is an SPV?
+    - What is a Special Purpose Vehicle?
+
+- intent: what_abd
+  examples: |
+    - What is an ABD?
+    - What is area based development?
+    - How the projects are implemented in a city?
+    - Categories of projects in a Smart City? 
+
+- intent: what_pmc
+  examples: |
+    - What is a PMC?
+    - What is a Project Management Consultant?
+    - How industry actively collaborates in the development of a Smart City?
+    - How technical expertise / assistance is hired?
+    - Apart from the SPV, who else develops the Smart City projects?
+
+- intent: what_proposal
+  examples: |
+    - What is SCP?
+    - What is a smart city proposal?
+    - What kind of projects are being done in the smart cities?
+    - What smart solutions are we working on?
+    - What was included in the Smart City Proposals (SCPs)?
+
+# N
+
+
+- intent: what_nmt
+  examples: |
+    - What is NMT?
+
+- intent: what_iccc
+  examples: |
+    - What is ICCC?
+
+- intent: what_azadi_ka_amrit_mahotsav
+  examples: |
+    - What is akam
+    - What is Azadi Ka Amrit Mahotsav?
+    - How are you celebrating the 75 years of independence?
+    - What events are organised for 75 years of independence? 
+
+- intent: what_cycles4change_challenge
+  examples: |
+    - What is The India Cycles4Change Challenge?
+
+- intent: what_streets4people_challenge
+  examples: |
+    - What is the Streets4 people challenge?
+    - What is the government doing to encourage walking?
+    - What is the government doing to promote walking?
+    - What is the goal of S4P?
+    - Is ITDP part of S4P?
+
+- intent: what_placemaking_marathon
+  examples: |
+    - What are you doing for placemaking?
+    - placemaking event
+    - public space transformation
+
+- intent: what_urban_learning_internship_program
+  examples: |
+    - What is tulip?
+    - What is Urban Learning Internship Program?
+    - Are there internships in the mission?
+    - How can I get involved?
+    - What about internships?
+
+- intent: where_download_smart_cities_data
+  examples: |
+    - Where can I download smart cities data?
+    - From where can I download data?
+    - Where can I get the data from?
+    - From where can I get data?
+    - From where can data be downloaded?
+    - Where can I get data?
+    - need data
+    - need to download data
+    - smart city data
+
+- intent: what_smartnet
+  examples: |
+    - What is smartnet?
+
+- intent: what_smart_cities_open_data_portal
+  examples: |
+    - What is Smart Cities Open Data Portal?
+    - How do you share data with the citizens?
+
+- intent: what_nurturing_neighbourhoods_challenge
+  examples: |
+    - What is Nurturing Neighborhoods Challenge?
+    - What are you doing for the well-being of young children and their caregivers?
+
+- intent: what_nuis
+  examples: |
+    - What is National Urban Innovation Stack?
+    - What is NUIS?
+
+- intent: what_national_urban_digital_mission
+  examples: |
+    - What is National Urban Digital Mission?
+    - What is NUDM?
+
+- intent: visit_indian_urban_observatory
+  examples: |
+    - Can I visit the India Urban Observatory?
+
+- intent: what_iuo
+  examples: |
+    - What is India Urban Observatory?
+    - What is IUO?
+
+- intent: what_iudx
+  examples: |
+    - What is India Urban data Exchange?
+    - What is IUDX?
+
+- intent: what_fellowship_program
+  examples: |
+    - What is the fellowship program run by the mission?
+    - What is India smart cities fellowship programme?
+    - How can I work for the mission?
+    - How can I get involved?
+
+- intent: incentives_to_cities
+  examples: |
+    - Does the mission provide awards or incentives to the cities?
+
+- intent: cycling_programs
+  examples: |
+    - Are there any cycling or NMT programs by the mission?
+    - What is India Cycle for Change challenge?
+
+- intent: guidelines_released
+  examples: |
+    - What are the various guidelines or SoPs released by the mission?
+
+- intent: standards_being_developed_by_ict
+  examples: |
+    - Are there any standards being developed for ICT?
+    - Are there any standards being developed for IT?
+    - What are the standards developed by the mission for ICCC
+
+- intent: cities_doing_nmt
+  examples: |
+    - Which cities are doing NMT projects?
+    - Which cities are active in cycling initiatives?
+
+# Framework
+
+- intent: what_dmaf
+  examples: |
+    - what is dmaf
+    - what is data maturity assessment framework
+    - how to assess the data maturity of the cities
+    - How to drive data driven governance?
+
+- intent: what_mpi
+  examples: |
+    - What is municipal performance index?
+    - What is MPI?
+    - How do we assess the performance of the municipality?
+    - How do the cities assess the performance of the municipality?
+
+- intent: what_ease_of_living_index
+  examples: |
+    - What is ease of living index?
+
+- intent: does_grade_cities
+  examples: |
+    - Does the mission grade the cities?
+
+
+- intent: what_benefits
+  examples: |
+    - What are the benefits that data smart cities will provide?
+
+- intent: benefit_computing_city_gdp
+  examples: |
+    - What is the benefit of computing city GDP?
+
+- intent: what_climate_framework
+  examples: |
+    - What is Climate Smart Cities Assessment Framework?
+    - Is the mission working on a climate assessment framework?
+    - What are the various initiatives related to climate change under the smart cities mission?
+    - What is the mission doing to assess the climate change in smart cities?
+
+# City Specific
+- regex: city_name
+  examples: |
+    - [a-zA-Z]{4,}
+
+- intent: is_a_smart_city
+  examples: |
+    - Is [Bangalore]{"entity": "city_name"} a smart city?
+    - Is [Nagpur]{"entity": "city_name"} a smart city?
+    - Is [Rourkela]{"entity": "city_name"} a smart city?
+    - Is [Tumakuru]{"entity": "city_name"} a smart city?
+    - Is [Aurangabad]{"entity": "city_name"} a smart city?
+    - Is [Puducherry]{"entity": "city_name"} a smart city?
+    - Is [Tiruppur]{"entity": "city_name"} a smart city?
+    - Is [Bhopal]{"entity": "city_name"} a smart city?
+    - Is [Udaipur]{"entity": "city_name"} a smart city?
+    - Is [Gwalior]{"entity": "city_name"} a smart city?
+    - Is [Bangalore]{"entity": "city_name"} a smart city or not?
+    - Is [Pune]{"entity": "city_name"} a smart city or not?
+    - [Faridabad]{"entity": "city_name"} smart city or not?
+    - Is [Bhopal]{"entity": "city_name"} part of the mission?
+    - Is [Bhopal]{"entity": "city_name"} part of the smart cities mission?
+    - Is [Visakhapatnam]{"entity": "city_name"} part of the smart cities mission?
+    - Is [Udaipur]{"entity": "city_name"} part of the smart cities mission?
+    - Is [Coimbatore]{"entity": "city_name"} one of the smart cities?
+    - Is [Udaipur]{"entity": "city_name"} one of the smart cities?
+
+# Misc
+
+- intent: start
+  examples: |
+    - how to start
+
+- intent: bot_capabilities
+  examples: |
+    - what can this bot do?
+    - what can you do?
+    - i need help
+    - what is your use
+    - what is your function
+
+- intent: what_time
+  examples: |
+    - whats the time
+    - tell me the time
+    - time please
+    - what time is it?
+
+- intent: survey_response
+  examples: |
+    - Strongly agree
+    - Agree
+    - Neither agree not disagree
+    - Disagree
+    - Strongly Disagree
+
+# Synonyms
+
+- synonym: bangalore
+  examples: |
+    - bengaluru
+    - Bengaluru
+    - Bangalore
+- synonym: New Delhi
+  examples: |
+    - delhi
+    - delli
+    - Delhi
+    - Dilli
+    - Nayi Delhi

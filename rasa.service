@@ -1,0 +1,11 @@
+[Unit]
+Description=Rasa-Core
+After=multi-user.target
+[Service]
+Type=simple
+User=ubuntu
+Environment="PYTHONPATH=$PYTHONPATH:/home/ubuntu/.local/lib/python3.7/site-packages"
+WorkingDirectory=/home/ubuntu/chatbot_rasa_3
+ExecStart=/home/ubuntu/.local/bin/rasa run --model /home/ubuntu/chatbot_rasa_3/models/ --endpoints /home/ubuntu/chatbot_rasa_3/endpoints.yml --credentials /home/ubuntu/chatbot_rasa_3/credentials.yml
+User=root
+Group=daemon
