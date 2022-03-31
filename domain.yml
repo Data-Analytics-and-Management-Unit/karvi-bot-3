@@ -127,6 +127,8 @@ responses:
 
   utter_happy:
   - text: "Great, carry on!"
+
+  utter_more_assistance:
   - text: "Great, can I help you with anything else?"
 
   utter_goodbye:
@@ -136,9 +138,9 @@ responses:
   - text: "See ya"
 
   utter_iamabot:
-  - text: "I am a bot. My name is Karvi. What's yours?"
-  - text: "I am an artificial being and my name is Karvi"
-  - text: "I am chatbot. Here to help you."
+  - text: "I am a bot. My name is Karvi."
+  - text: "I am an artificial being and my name is Karvi."
+  - text: "I am Karvi. Here to help you."
 
   utter_thanks_res:
   - text: "Thanks. Here goes the next one."
