@@ -292,18 +292,28 @@ nlu:
     - What are the various data initiatives under the smart cities mission?
     - What are the various data initiatives under the scm?
     - What are the various data initiatives under the mission?
+    - What are data initiative
+    - tell me about data initiatives
+    - data initiatives
+    - data programs
 
 - intent: innovation_initiatives
   examples: |
     - What are the various innovation led initiatives under the smart cities mission?
+    - innovation led initiatives
+    - tell me about innovation
 
 - intent: assessment_inititatives
   examples: |
     - What are the various initiatives for assessments under the smart cities mission?
+    - what are assessment initiatives
+    - how do you assess cities
+    - how do you assess the performance of a city
 
 - intent: nmt_initiatives
   examples: |
     - What are the various NMT initiatives under the smart cities mission?
+    - What are different NMT initiatives?
     - How are you improving nmt in India?
     - Is NMT being improved in our cities?
     - Is walking and cycling infrastructure being improved in our cities?
@@ -311,6 +321,10 @@ nlu:
 - intent: capacity_building_initiatives
   examples: |
     - What are the various capacity building initiatives under the smart cities mission?
+    - What are different capacity building initiatives
+    - How is capacity build at the city
+    - How are cities trained
+    - How to build capacity?
 
 - intent: what_nulp
   examples: | 
@@ -321,17 +335,21 @@ nlu:
 - intent: how_mission_knowledge_exchange
   examples: |
     - How the mission engage with the citizen in the decision?
-    - How the mission engage with the citizen in the decision?
+    - Are citizens consulted for decision making?
+    - How are citizens involved?
 
 - intent: what_citiis
   examples: |
     - What is CITIIS programme?
+    - Tell me about CITIIS programme
 
 - intent: what_cix
   examples: |
     - What is city innovation exchange?
     - What is CiX?
     - what are you doing to foster innovation?
+    - How can startups engage with the smart cities?
+    - How can startups get involved?
 
 - intent: what_data_smart_strategy
   examples: |
@@ -344,10 +362,12 @@ nlu:
 - intent: pandemic_preparedness
   examples: |
     - How has the mission prepared for the pandemic?
+    - What steps were taken for pandemic management?
 
 - intent: covid_affect_scm
   examples: |
     - Did covid affect SCM progress?
+    - How did covid impacted the mission?
 
 # Glossary
 
@@ -355,6 +375,7 @@ nlu:
   examples: |
     - What is a DPR?
     - What is a detailed project report?
+    - Tell me about drp
 
 - intent: what_ulb
   examples: |
@@ -395,10 +416,12 @@ nlu:
 - intent: what_nmt
   examples: |
     - What is NMT?
+    - What is non motorised transportation?
 
 - intent: what_iccc
   examples: |
     - What is ICCC?
+    - What is integrated command and control center?
 
 - intent: what_azadi_ka_amrit_mahotsav
   examples: |
@@ -448,6 +471,7 @@ nlu:
 - intent: what_smartnet
   examples: |
     - What is smartnet?
+    - Where can I find all the documents for smart cities?
 
 - intent: what_smart_cities_open_data_portal
   examples: |
