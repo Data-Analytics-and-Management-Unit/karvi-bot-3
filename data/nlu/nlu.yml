@@ -138,6 +138,7 @@ nlu:
     - What is the focus of Smart City Mission
     - What is the objective of SCM?
     - SCM means?
+    - What does the mission do?
 
 - intent: components_scm
   examples: |
@@ -174,6 +175,7 @@ nlu:
 - intent: initially_selected
   examples: |
     - How many cities were initially selected for the SCM? 
+    - What is the number of cities selected in the mission?
 
 - intent: scm_imp_economic_growth
   examples: |
@@ -209,11 +211,17 @@ nlu:
 - intent: city_profiles
   examples: |
      - Where can I find the city profiles under the smart cities mission?
+     - Need city profiles for all the smart cities
+     - Where are the profiles of the cities in the mission
+     - Where are the profiles of the cities
 
 - intent: where_progress_scm
   examples: |
     - Where can I see the progress of all the smart cities?
-
+    - Need to see the progress of the cities
+    - Find progress of the cities
+    - where can we find the updates of the projects
+  
 - intent: see_download_data_analysis_visualisations
   examples: |
     - Where can I see and download data?
@@ -228,6 +236,8 @@ nlu:
 - intent: city_selection
   examples: |
     - How was the process for selecting the cities?
+    - How are the cities selected?
+    - What is the selection process of the cities?
 
 - intent: ulb_work
   examples: |
@@ -237,6 +247,7 @@ nlu:
 - intent: ulb_structure
   examples: |
     - How is a ULB structured?
+    - What is the structure of the ulb
 
 - intent: scm_implemented
   examples: |
@@ -271,6 +282,8 @@ nlu:
 - intent: which_ministry_scm
   examples: |
     - Smart Cities mission is under which ministry or department?
+    - which ministry or department is heading the mission?
+    - which organisation is leading the mission?
 
 # Various Initiatives
 
@@ -286,6 +299,9 @@ nlu:
     - what projects are there?
     - what is the mission working on?
     - which projects are ongoing?
+    - tell me about the work smart city has been doing
+    - work done by smart cities mission
+    - work done by you
 
 - intent: data_initiatives
   examples: |
@@ -433,6 +449,10 @@ nlu:
 - intent: what_cycles4change_challenge
   examples: |
     - What is The India Cycles4Change Challenge?
+    - What initiatives are taken up for cycling?
+    - What projects are happing for cycling
+    - How is the government promoting cycling
+    - how is cycling promoted in our cities?
 
 - intent: what_streets4people_challenge
   examples: |
@@ -467,6 +487,8 @@ nlu:
     - need data
     - need to download data
     - smart city data
+    - where can I find data
+    - where is smart city data
 
 - intent: what_smartnet
   examples: |
@@ -496,6 +518,8 @@ nlu:
 - intent: visit_indian_urban_observatory
   examples: |
     - Can I visit the India Urban Observatory?
+    - How can one visit India Urban Observatory?
+    - Is it possible to visit india urban observatory?
 
 - intent: what_iuo
   examples: |
@@ -517,6 +541,8 @@ nlu:
 - intent: incentives_to_cities
   examples: |
     - Does the mission provide awards or incentives to the cities?
+    - How are cities incentivised?
+    - Are there any awards for the cities?
 
 - intent: cycling_programs
   examples: |
@@ -526,6 +552,8 @@ nlu:
 - intent: guidelines_released
   examples: |
     - What are the various guidelines or SoPs released by the mission?
+    - List various guidelines or sop under the mission
+    - what to know about various guidelines
 
 - intent: standards_being_developed_by_ict
   examples: |
@@ -557,19 +585,24 @@ nlu:
 - intent: what_ease_of_living_index
   examples: |
     - What is ease of living index?
+    - what to know about the ease of living index
+    - what is eol index?
 
 - intent: does_grade_cities
   examples: |
     - Does the mission grade the cities?
-
+    - Are the cities ranked or graded?
+    - How are cities ranked?
 
 - intent: what_benefits
   examples: |
     - What are the benefits that data smart cities will provide?
+    - what are the benefits for the cities?
 
 - intent: benefit_computing_city_gdp
   examples: |
     - What is the benefit of computing city GDP?
+    - what is the benefit of the city gdp?
 
 - intent: what_climate_framework
   examples: |
@@ -610,6 +643,8 @@ nlu:
 - intent: start
   examples: |
     - how to start
+    - how to get started
+    - where to begin?
 
 - intent: bot_capabilities
   examples: |
@@ -633,6 +668,18 @@ nlu:
     - Neither agree not disagree
     - Disagree
     - Strongly Disagree
+
+- intent: tell_me_something
+  examples: |
+    - Tell me something
+    - What is this?
+
+# Event related
+
+- intent: what_event
+  examples: |
+    - What is this event about?
+    - Tell me about the event.
 
 # Synonyms
 
