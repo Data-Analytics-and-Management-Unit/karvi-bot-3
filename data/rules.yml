@@ -22,3 +22,8 @@ rules:
   - intent: bot_capabilities
   - action: utter_brief_bot_intro
   - action: utter_help_options
+
+- rule: data download
+  steps:
+  - intent: where_download_smart_cities_data
+  - action: utter_where_download_smart_cities_data

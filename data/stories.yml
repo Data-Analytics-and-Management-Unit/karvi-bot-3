@@ -31,6 +31,16 @@ stories:
   - action: utter_brief_bot_intro
   - intent: about_scm
   - action: utter_about_scm
+  - action: utter_know_about_initiatives_ques
+  - intent: affirm
+  - action: utter_various_initiatives
+  - action: utter_know_about_all_initiatives_ques
+  - intent: affirm
+  - action: utter_data_initiatives
+  - action: utter_innovation_initiatives
+  - action: utter_assessment_inititatives
+  - action: utter_nmt_initiatives
+  - action: utter_capacity_building_initiatives
   - intent: components_scm
   - action: utter_components_scm
   - intent: purpose_scm
@@ -680,3 +690,10 @@ stories:
   - action: utter_question_2
   - intent: survey_response
   - action: utter_survey_end
+
+# Event related
+
+- story: about the event
+  steps:
+  - intent: what_event
+  - action: utter_what_event

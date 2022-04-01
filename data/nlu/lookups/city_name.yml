@@ -1,4 +1,4 @@
-# version: "2.0"
+# version: "3.0"
 
 # nlu:
 #   - lookup: city_name
@@ -103,3 +103,4 @@
 #       - Kavaratti
 #       - Bihar Sharif
 #       - Shillong
+#       - Gurgaon
