@@ -48,6 +48,8 @@ nlu:
     - okay
     - right
     - sure
+    - oh nice
+    - nice
 
 - intent: affirm
   examples: |
@@ -61,6 +63,7 @@ nlu:
     - yo
     - why not
     - ya
+    - yup
 
 - intent: deny
   examples: |
@@ -104,7 +107,6 @@ nlu:
     - not good
     - not very good
     - extremly sad
-    - so saad
     - so sad
 
 - intent: bot_challenge
@@ -197,6 +199,11 @@ nlu:
     - Who is supporting the development of the projects?
     - How much money does a city get?
     - What support does cities get from the mission?
+    - Tell me about the funds
+    - How much funds does the cities get?
+    - How is the mission funded?
+    - tell me about the finance
+    - how is finance managed
 
 - intent: additional_funds
   examples: |
@@ -278,6 +285,7 @@ nlu:
     - who is at the top
     - who is the mission director
     - who is the director
+    - who is the secretary
 
 - intent: which_ministry_scm
   examples: |
@@ -302,6 +310,7 @@ nlu:
     - tell me about the work smart city has been doing
     - work done by smart cities mission
     - work done by you
+    - What are the various initiatives undertaken by the mission?
 
 - intent: data_initiatives
   examples: |
@@ -333,6 +342,10 @@ nlu:
     - How are you improving nmt in India?
     - Is NMT being improved in our cities?
     - Is walking and cycling infrastructure being improved in our cities?
+    - Tell me about mobility initiatives
+    - what mobility initiatives are undertaken
+    - Tell me about transport initiatives
+    - what transport initiatives are undertaken
 
 - intent: capacity_building_initiatives
   examples: |
@@ -565,6 +578,8 @@ nlu:
   examples: |
     - Which cities are doing NMT projects?
     - Which cities are active in cycling initiatives?
+    - what are we doing to promote cycling
+    - Any project related to environment
 
 # Framework
 
@@ -593,6 +608,7 @@ nlu:
     - Does the mission grade the cities?
     - Are the cities ranked or graded?
     - How are cities ranked?
+    - how do you rank cities?
 
 - intent: what_benefits
   examples: |
@@ -610,6 +626,27 @@ nlu:
     - Is the mission working on a climate assessment framework?
     - What are the various initiatives related to climate change under the smart cities mission?
     - What is the mission doing to assess the climate change in smart cities?
+
+# Project related
+
+- intent: project_progress
+  examples: |
+    - how much percentage project completion
+    - where can i find the updates on the projects
+    - what projects are done
+    - how many projects are remaining
+    - how much work is done till date
+    - i want to know the update on the projects
+    - i want to know the project updates
+    - what projects are left
+    - how many projects are pending
+    - how many projects are tendered
+
+- intent: learn_more_about_projects
+  examples: |
+    - where can i learn more about the projects
+    - i want to know about the cities
+    - where can i find details of the city
 
 # City Specific
 - regex: city_name
@@ -674,12 +711,24 @@ nlu:
     - Tell me something
     - What is this?
 
+- intent: want_to_ask
+  examples: |
+    - Want to ask something
+    - Tell me one thing
+
+- intent: conversation_init
+  examples: |
+    - Whats up?
+    - Whats new?
+
 # Event related
 
 - intent: what_event
   examples: |
     - What is this event about?
     - Tell me about the event.
+
+# Feedback
 
 # Synonyms
 

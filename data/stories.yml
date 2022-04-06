@@ -6,12 +6,15 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_brief_bot_intro
+  - checkpoint: check_bot_intros
+  - action: utter_sample_questions
   - action: utter_help_options
-  - intent: mood_great
-  - action: utter_happy
+  - checkpoint: check_greeted
 
 - story: general_hi_hello
   steps:
+  - checkpoint: check_greeted
   - intent: how_are_you
   - action: utter_how_are_you
   - intent: mood_great
@@ -19,39 +22,69 @@ stories:
 
 - story: people asking about the chatbot
   steps:
-  - intent: greet
+  - checkpoint: check_greeted
   - action: utter_greet
   - intent: bot_name_challenge
   - action: utter_iamabot
 
 - story: about the smart cities mission
   steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_brief_bot_intro
+  - checkpoint: check_bot_intros
   - intent: about_scm
   - action: utter_about_scm
   - action: utter_know_about_initiatives_ques
+  - checkpoint: check_asked_know_initiatives
+
+- story: scm components
+  steps:
+  - checkpoint: check_bot_intros
+  - intent: components_scm
+  - action: utter_components_scm
+
+- story: scm purpose
+  steps:
+  - intent: purpose_scm
+  - action: utter_purpose_scm
+  - intent: acknowledgement
+  - action: utter_happy
+
+- story: know initiatives affirm
+  steps:
+  - checkpoint: check_asked_know_initiatives
   - intent: affirm
   - action: utter_various_initiatives
   - action: utter_know_about_all_initiatives_ques
+  - checkpoint: check_asked_summary_initiatives
+
+- story: know initiatives deny
+  steps:
+  - checkpoint: check_asked_know_initiatives
+  - intent: deny
+  - action: utter_happy
+  - checkpoint: might_be_bye_time
+
+- story: summary initiatives affirm
+  steps:
+  - checkpoint: check_asked_summary_initiatives
   - intent: affirm
   - action: utter_data_initiatives
   - action: utter_innovation_initiatives
   - action: utter_assessment_inititatives
   - action: utter_nmt_initiatives
   - action: utter_capacity_building_initiatives
-  - intent: components_scm
-  - action: utter_components_scm
-  - intent: purpose_scm
-  - action: utter_purpose_scm
-  - intent: acknowledgement
+  - action: utter_did_that_help
+  - checkpoint: check_asked_did_help
+
+- story: summary initiatives deny
+  steps:
+  - checkpoint: check_asked_summary_initiatives
+  - intent: deny
   - action: utter_happy
+  - checkpoint: might_be_bye_time
 
 - story: scm components
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: components_scm
   - action: utter_components_scm
   - intent: acknowledgement
@@ -68,8 +101,7 @@ stories:
 
 - story: read more about scm
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: where_read_more_scm
   - action: utter_where_read_more_scm
   - intent: acknowledgement
@@ -77,8 +109,7 @@ stories:
 
 - story: about smart cities
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_smart_city
   - action: utter_what_smart_city
   - intent: acknowledgement
@@ -86,8 +117,7 @@ stories:
 
 - story: no of cities in scm
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: no_city_in_scm
   - action: utter_no_city_in_scm
   - intent: acknowledgement
@@ -95,8 +125,7 @@ stories:
 
 - story: cities initially selected
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: initially_selected
   - action: utter_initially_selected
   - intent: acknowledgement
@@ -104,8 +133,7 @@ stories:
 
 - story: is scm imp for ecomonic growth
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: scm_imp_economic_growth
   - action: utter_scm_imp_economic_growth
   - intent: acknowledgement
@@ -113,8 +141,7 @@ stories:
 
 - story: scm funds
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: scm_funds
   - action: utter_scm_funds
   - intent: acknowledgement
@@ -122,8 +149,7 @@ stories:
 
 - story: additional funds
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: additional_funds
   - action: utter_additional_funds
   - intent: acknowledgement
@@ -131,8 +157,7 @@ stories:
 
 - story: city profiles
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: city_profiles
   - action: utter_city_profiles
   - intent: acknowledgement
@@ -140,8 +165,7 @@ stories:
 
 - story: scm progress
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: where_progress_scm
   - action: utter_where_progress_scm
   - intent: acknowledgement
@@ -149,8 +173,7 @@ stories:
 
 - story: download data analysis viz
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: see_download_data_analysis_visualisations
   - action: utter_see_download_data_analysis_visualisations
   - intent: acknowledgement
@@ -158,8 +181,7 @@ stories:
 
 - story: scm events
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: scm_events
   - action: utter_scm_events
   - intent: acknowledgement
@@ -167,8 +189,7 @@ stories:
 
 - story: city selection process
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: city_selection
   - action: utter_city_selection
   - intent: acknowledgement
@@ -176,8 +197,7 @@ stories:
 
 - story: ulb working
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: ulb_work
   - action: utter_ulb_work
   - intent: acknowledgement
@@ -185,8 +205,7 @@ stories:
 
 - story: ulb structure
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: ulb_structure
   - action: utter_ulb_structure
   - intent: acknowledgement
@@ -194,8 +213,7 @@ stories:
 
 - story: scm implementation
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: scm_implemented
   - action: utter_scm_implemented
   - intent: acknowledgement
@@ -203,8 +221,7 @@ stories:
 
 - story: city managers
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: smart_city_manager
   - action: utter_smart_city_manager
   - intent: acknowledgement
@@ -212,8 +229,7 @@ stories:
 
 - story: ulb spv collaboration
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: ulb_spv_collaboration
   - action: utter_ulb_spv_collaboration
   - intent: acknowledgement
@@ -221,8 +237,7 @@ stories:
 
 - story: scm leadership
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: about_leadership
   - action: utter_about_leadership
   - intent: acknowledgement
@@ -230,8 +245,7 @@ stories:
 
 - story: which ministry scm
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: which_ministry_scm
   - action: utter_which_ministry_scm
   - intent: acknowledgement
@@ -239,8 +253,7 @@ stories:
 
 - story: various initiatives
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: various_initiatives
   - action: utter_various_initiatives
   - intent: acknowledgement
@@ -248,8 +261,7 @@ stories:
 
 - story: data initiatives
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: data_initiatives
   - action: utter_data_initiatives
   - intent: acknowledgement
@@ -257,8 +269,7 @@ stories:
 
 - story: innovation initiatives
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: innovation_initiatives
   - action: utter_innovation_initiatives
   - intent: acknowledgement
@@ -266,8 +277,7 @@ stories:
 
 - story: assessment initiatives
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: assessment_inititatives
   - action: utter_assessment_inititatives
   - intent: acknowledgement
@@ -275,8 +285,7 @@ stories:
 
 - story: nmt initiatives
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: nmt_initiatives
   - action: utter_nmt_initiatives
   - intent: acknowledgement
@@ -284,8 +293,7 @@ stories:
 
 - story: capacity building initiatives
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: capacity_building_initiatives
   - action: utter_capacity_building_initiatives
   - intent: acknowledgement
@@ -293,8 +301,7 @@ stories:
 
 - story: what is nulp
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_nulp
   - action: utter_what_nulp
   - intent: acknowledgement
@@ -302,8 +309,7 @@ stories:
 
 - story: how to do knowledge exchange
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: how_mission_knowledge_exchange
   - action: utter_how_mission_knowledge_exchange
   - intent: acknowledgement
@@ -311,8 +317,7 @@ stories:
 
 - story: what is citiis
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_citiis
   - action: utter_what_citiis
   - intent: acknowledgement
@@ -320,8 +325,7 @@ stories:
 
 - story: what is cix
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_cix
   - action: utter_what_cix
   - intent: acknowledgement
@@ -329,8 +333,7 @@ stories:
 
 - story: what is data smart city strategy
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_data_smart_strategy
   - action: utter_what_data_smart_strategy
   - intent: acknowledgement
@@ -338,8 +341,7 @@ stories:
 
 - story: pandemic preparedness
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: pandemic_preparedness
   - action: utter_pandemic_preparedness
   - intent: acknowledgement
@@ -347,8 +349,7 @@ stories:
 
 - story: covid affected scm
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: covid_affect_scm
   - action: utter_covid_affect_scm
   - intent: acknowledgement
@@ -356,8 +357,7 @@ stories:
 
 - story: what is dpr
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_dpr
   - action: utter_what_dpr
   - intent: acknowledgement
@@ -365,8 +365,7 @@ stories:
 
 - story: what is ulb
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_ulb
   - action: utter_what_ulb
   - intent: acknowledgement
@@ -374,8 +373,7 @@ stories:
 
 - story: what is spv
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_spv
   - action: utter_what_spv
   - intent: acknowledgement
@@ -383,8 +381,7 @@ stories:
 
 - story: what is abd
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_abd
   - action: utter_what_abd
   - intent: acknowledgement
@@ -392,8 +389,7 @@ stories:
 
 - story: what is pmc
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_pmc
   - action: utter_what_pmc
   - intent: acknowledgement
@@ -401,8 +397,7 @@ stories:
 
 - story: what is a proposal
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_proposal
   - action: utter_what_proposal
   - intent: acknowledgement
@@ -410,8 +405,7 @@ stories:
 
 - story: what is nmt
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_nmt
   - action: utter_what_nmt
   - intent: acknowledgement
@@ -419,8 +413,7 @@ stories:
 
 - story: what is iccc
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_iccc
   - action: utter_what_iccc
   - intent: acknowledgement
@@ -428,8 +421,7 @@ stories:
 
 - story: what is akam
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_azadi_ka_amrit_mahotsav
   - action: utter_what_azadi_ka_amrit_mahotsav
   - action: utter_akam_images
@@ -438,8 +430,7 @@ stories:
 
 - story: what is c4c
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_cycles4change_challenge
   - action: utter_what_cycles4change_challenge
   - intent: acknowledgement
@@ -447,8 +438,7 @@ stories:
 
 - story: what is s4p
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_streets4people_challenge
   - action: utter_what_streets4people_challenge
   - intent: acknowledgement
@@ -456,8 +446,7 @@ stories:
 
 - story: about tulip
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_urban_learning_internship_program
   - action: utter_what_urban_learning_internship_program
   - intent: acknowledgement
@@ -465,8 +454,7 @@ stories:
 
 - story: download data
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: where_download_smart_cities_data
   - action: utter_where_download_smart_cities_data
   - intent: acknowledgement
@@ -474,8 +462,7 @@ stories:
 
 - story: what is smartnet
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_smartnet
   - action: utter_what_smartnet
   - intent: acknowledgement
@@ -483,8 +470,7 @@ stories:
 
 - story: what is scodp
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_smart_cities_open_data_portal
   - action: utter_what_smart_cities_open_data_portal
   - intent: acknowledgement
@@ -492,8 +478,7 @@ stories:
 
 - story: what is nnc
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_nurturing_neighbourhoods_challenge
   - action: utter_what_nurturing_neighbourhoods_challenge
   - intent: acknowledgement
@@ -501,8 +486,7 @@ stories:
 
 - story: what is nuis
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_nuis
   - action: utter_what_nuis
   - intent: acknowledgement
@@ -510,8 +494,7 @@ stories:
 
 - story: what is nudm
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_national_urban_digital_mission
   - action: utter_what_national_urban_digital_mission
   - intent: acknowledgement
@@ -519,8 +502,7 @@ stories:
 
 - story: visit iuo
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: visit_indian_urban_observatory
   - action: utter_visit_indian_urban_observatory
   - intent: acknowledgement
@@ -528,8 +510,7 @@ stories:
 
 - story: what is iuo
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_iuo
   - action: utter_what_iuo
   - intent: acknowledgement
@@ -537,8 +518,7 @@ stories:
 
 - story: what is iudx
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_iudx
   - action: utter_what_iudx
   - intent: acknowledgement
@@ -546,8 +526,7 @@ stories:
 
 - story: about fellowship
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_fellowship_program
   - action: utter_what_fellowship_program
   - intent: acknowledgement
@@ -555,8 +534,7 @@ stories:
 
 - story: incentives to cities
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: incentives_to_cities
   - action: utter_incentives_to_cities
   - intent: acknowledgement
@@ -564,8 +542,7 @@ stories:
 
 - story: about cycling programs
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: cycling_programs
   - action: utter_cycling_programs
   - intent: acknowledgement
@@ -573,8 +550,7 @@ stories:
 
 - story: scm guidelines
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: guidelines_released
   - action: utter_guidelines_released
   - intent: acknowledgement
@@ -582,8 +558,7 @@ stories:
 
 - story: scm standards
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: standards_being_developed_by_ict
   - action: utter_standards_being_developed_by_ict
   - intent: acknowledgement
@@ -591,8 +566,7 @@ stories:
 
 - story: cities nmt
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: cities_doing_nmt
   - action: utter_cities_doing_nmt
   - intent: acknowledgement
@@ -600,8 +574,7 @@ stories:
 
 - story: what is dmaf
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_dmaf
   - action: utter_what_dmaf
   - intent: acknowledgement
@@ -609,8 +582,7 @@ stories:
 
 - story: what is mpi
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_mpi
   - action: utter_what_mpi
   - intent: acknowledgement
@@ -618,8 +590,7 @@ stories:
 
 - story: what is eol
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_ease_of_living_index
   - action: utter_what_ease_of_living_index
   - intent: acknowledgement
@@ -627,8 +598,7 @@ stories:
 
 - story: city grades
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: does_grade_cities
   - action: utter_does_grade_cities
   - intent: acknowledgement
@@ -636,8 +606,7 @@ stories:
 
 - story: scm benefits
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_benefits
   - action: utter_what_benefits
   - intent: acknowledgement
@@ -645,8 +614,7 @@ stories:
 
 - story: city gdp
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: benefit_computing_city_gdp
   - action: utter_benefit_computing_city_gdp
   - intent: acknowledgement
@@ -654,17 +622,25 @@ stories:
 
 - story: what is climate framework
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: what_climate_framework
   - action: utter_what_climate_framework
   - intent: acknowledgement
   - action: utter_happy
 
+# Project related
+
+- story: project progress
+  steps:
+  - checkpoint: check_greeted
+  - intent: project_progress
+  - action: utter_project_progress
+
 # City Specific
 
 - story: is a smart city
   steps:
+  - checkpoint: check_greeted
   - intent: is_a_smart_city
   - action: action_is_smart_city
 
@@ -677,8 +653,7 @@ stories:
 
 - story: survey
   steps:
-  - intent: greet
-  - action: utter_greet
+  - checkpoint: check_greeted
   - intent: purpose_scm
   - action: utter_purpose_scm
   - action: utter_survey_request
@@ -691,9 +666,71 @@ stories:
   - intent: survey_response
   - action: utter_survey_end
 
+- story: init conversation
+  steps:
+  - checkpoint: check_greeted
+  - intent: conversation_init
+  - action: utter_general_chit_chat
+  - checkpoint: check_asked_ques
+
+- story: init conv affirm
+  steps:
+  - checkpoint: check_asked_ques
+  - intent: affirm
+  - action: utter_data_initiatives
+  - action: utter_did_that_help
+  - checkpoint: check_asked_did_help
+
+- story: init conv deny
+  steps:
+  - checkpoint: check_asked_ques
+  - intent: deny
+  - action: utter_brief_bot_intro
+  - checkpoint: might_be_bye_time
+
+- story: help affirm
+  steps:
+  - checkpoint: check_asked_did_help
+  - intent: affirm
+  - action: utter_happy
+  - checkpoint: might_be_bye_time
+
+- story: help deny
+  steps:
+  - checkpoint: check_asked_did_help
+  - intent: deny
+  - action: utter_if_did_not_help
+  - checkpoint: might_be_bye_time
+
+- story: end of conversation
+  steps:
+  - checkpoint: might_be_bye_time
+  - action: utter_more_assistance
+  - checkpoint: check_more_assistance
+
+- story: more assistance affirm
+  steps:
+  - checkpoint: check_more_assistance
+  - intent: affirm
+  - action: utter_want_to_ask_something
+  - checkpoint: surely_bye_time
+
+- story: more assistance deny
+  steps:
+  - checkpoint: check_more_assistance
+  - intent: deny
+  - action: utter_happy
+  - checkpoint: surely_bye_time
+
+- story: bye time
+  steps:
+  - checkpoint: surely_bye_time
+  - intent: goodbye
+  - action: utter_goodbye
+
 # Event related
 
-- story: about the event
-  steps:
-  - intent: what_event
-  - action: utter_what_event
+# - story: about the event
+#   steps:
+#   - intent: what_event
+#   - action: utter_what_event

@@ -27,3 +27,8 @@ rules:
   steps:
   - intent: where_download_smart_cities_data
   - action: utter_where_download_smart_cities_data
+
+- rule: want to ask
+  steps:
+  - intent: want_to_ask
+  - action: utter_want_to_ask_something

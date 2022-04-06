@@ -86,6 +86,11 @@ intents:
   - bot_capabilities
   - what_time
   - survey_response
+  - tell_me_something
+  - want_to_ask
+  - conversation_init
+  - is_useful
+  - project_progress
 
 entities:
   - city_name
@@ -111,6 +116,9 @@ responses:
       payload: /scm_funds
     - title: "Initiatives"
       payload: /various_initiatives
+
+  utter_sample_questions:
+  - text: "Here are some of the questions to get you started.\n1. What is the mission working on?\n2. Where can I download smart cities data?\n3. What mobility initiatives are undertaken?"
   
   utter_how_are_you:
   - text: "I am good. How about you?"
@@ -124,12 +132,17 @@ responses:
 
   utter_did_that_help:
   - text: "Did that help you?"
+  - text: "Was this useful?"
+  - text: "Was I able to answer your queries?"
+  - text: "Was this helpful?"
 
   utter_happy:
   - text: "Great, carry on!"
+  - text: "😄"
 
   utter_more_assistance:
   - text: "Great, can I help you with anything else?"
+  - text: "Do you want to know something else?"
 
   utter_goodbye:
   - text: "Bye"
@@ -219,10 +232,13 @@ responses:
   - text: "Even though the SPV or Special Purpose Vehicle is the sole responsible for the management and implementation of the Smart City projects, they usually collaborate closely with the existing ULB. As both entities manage urban governance and projects, coordination is essential for its succesful implementation."
 
   utter_about_leadership:
-  - text: "From MoHUA the Mission is leaded by Mr. Hardeep S Puri - Hon'ble Minister, Ministry of Housing and Urban Affairs, Ministry of Petroleum and Natural Gas and Mr. Durga Shanker Mishra - Secretary, Ministry of Housing and Urban Affairs. At the Smart Cities Mission: Mr. Kunal Kumar is Joint Secretary and  Mission Director along with Mr. Lal Chhandama, Mr. Rahul Kapoor, Mr. Jitendra Meha who serve as Director SC-I, SC-II and SC-III respectively. Last but not least, Mr. Supriyo Mukherjee is the Deputy Secretary. \nTo know more, please visit our website: https://smartcities.gov.in/team"
+  - text: "From MoHUA the Mission is leaded by Mr. Hardeep S Puri - Hon'ble Minister, Ministry of Housing and Urban Affairs, Ministry of Petroleum and Natural Gas and Mr. Manoj Joshi - Secretary, Ministry of Housing and Urban Affairs. At the Smart Cities Mission: Mr. Kunal Kumar is Joint Secretary and  Mission Director along with Mr. Lal Chhandama, Mr. Rahul Kapoor, Mr. Jitendra Meha who serve as Director SC-I, SC-II and SC-III respectively. Last but not least, Mr. Supriyo Mukherjee is the Deputy Secretary. \nTo know more, please visit our website: https://smartcities.gov.in/team"
 
   utter_which_ministry_scm:
   - text: "India Smart Cities Mission is led by the Ministry of Housing & Urban Affairs"
+
+  utter_know_about_initiatives_ques:
+  - text: "Do you want to know about the initiatives undertaken by the smart cities mission?"
 
   utter_various_initiatives:
   - text: "Currently, there are over 21 active initiatives around data, innovation, climate change, assessments, NMT and capacity building. Kindly check them out at: https://smartcities.gov.in/Initiatives"
@@ -237,6 +253,9 @@ responses:
       payload: /nmt_initiatives
     - title: "Capacity Building"
       payload: /capacity_building_initiatives
+
+  utter_know_about_all_initiatives_ques:
+  - text: "Do you want a summary of these initiatives?"
 
   utter_data_initiatives:
   - text: "India Urban Data Exchange, DataSmart Cities Strategy and India Urban Observatory are data initiatives from the mission."
@@ -362,9 +381,9 @@ responses:
 
   utter_where_download_smart_cities_data:
   - text: "The mission has multiple data platforms where you can search for the datasets. Here is a list to the platforms:
-            1. Smart Cities Open Data Portal (https://smartcities.data.gov.in)
-            2. India Urban Data Exchange (https://catalogue.iudx.org.in)
-            3. India Urban Observatory (https:iuo.mohua.gov.in)"
+            \n1. Smart Cities Open Data Portal (https://smartcities.data.gov.in)
+            \n2. India Urban Data Exchange (https://catalogue.iudx.org.in)
+            \n3. India Urban Observatory (https:iuo.mohua.gov.in)"
 
   utter_what_smartnet:
   - text: "SmartNet is a repository of resources to support the development of cities across India and to create a resource-rich ecosystem of learning, sharing and disseminating for city managers and primary stakeholders in the urban transformation of India. The platform provides a horizontal learning and knowledge sharing platform for exchange between cities, practitioners, academia, researchers and technologists. Visit our website to know more about smartnet and download relevant resources: https://smartnet.niua.org/ "
@@ -461,6 +480,11 @@ responses:
     - title: "Strongly Disagree"
       payload: /survey_response
 
+  # Project related
+
+  utter_project_progress:
+  - text: "You can find summary of the work done till date on our dashboard available at https://smartcities.gov.in/dashboard. City specific project details can be found at https://smartcities.gov.in/cities-profiles. I am still learning about this topic and  will provide you more details in the future."
+
   # Misc
 
   utter_acknowledgement:
@@ -472,6 +496,20 @@ responses:
   utter_survey_request:
   - text: "Can you spare sometime to answer a few questions? Your feedback will help us improve urban governance."
 
+  utter_want_to_ask_something:
+  - text: "Yeah, go ahead."
+  - text: "What do you want to know?"
+
+  utter_general_chit_chat:
+  - text: "Nothing much. Do you want to know about the data initiatives the Smart Cities Mission is working on?"
+  - text: "It's been a busy day answering so many questions. Do you want to know about the data initiatives the Smart Cities Mission is working on?"
+
+  utter_if_did_not_help:
+  - text: "So sorry to hear that. I will try my best next time."
+  - text: "Sorry, I am still under training."
+  - text: "Let me start taking tution classes."
+  - text: "I blame my creators."
+  - text: "After all my intelligence is artificial"
 
 session_config:
   session_expiration_time: 60
